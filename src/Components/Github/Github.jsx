@@ -25,21 +25,22 @@ const Github = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="text-center text-gray-600">Loading data, please wait...</div>;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div className="text-center text-red-600">Error: {error.message}</div>;
   }
 
   if (!data) {
-    return <div>Data not found</div>;
+    return <div className="text-center text-gray-600">Data not found</div>;
   }
 
   return (
-    <div>
-      Name: {data.login} <br />
-      Github Followers: {data.followers}
+    <div className="text-center p-4 border rounded-lg shadow-md">
+      <h1 className="text-2xl font-bold mb-2">GitHub Profile</h1>
+      <p className="text-lg">Name: <span className="font-semibold">{data.login}</span></p>
+      <p className="text-lg">Github Followers: <span className="font-semibold">{data.followers}</span></p>
     </div>
   );
 };
