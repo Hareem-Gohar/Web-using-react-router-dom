@@ -5,13 +5,14 @@ import img1 from "../../assets/goal.png";
 const Home = () => {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-lg py-16">
-        <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-16">
-          <div className="text-center sm:text-left">
-            <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight mb-6">
+      <section className="bg-gradient-to-r  text-black rounded-lg py-16">
+        <div className="flex flex-col sm:flex-row items-center justify-between px-6 sm:px-12 lg:px-16">
+          {/* Text Section */}
+          <div className="w-full sm:w-1/2 text-center sm:text-left mb-10 sm:mb-0">
+            <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight mb-6">
               Download Now and Achieve Your Goals
             </h2>
-            <p className="text-xl sm:text-2xl mb-8 text-opacity-80">
+            <p className="text-lg mb-8 text-opacity-80">
               Unlock the full potential of your productivity with our app. Start
               today!
             </p>
@@ -33,14 +34,11 @@ const Home = () => {
               &nbsp; Download Now
             </Link>
           </div>
-        </div>
 
-        <div className="absolute inset-0 w-full h-full flex justify-center items-center sm:justify-end">
-          <img
-            className="w-3/4 sm:w-[50%] max-w-md rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105"
-            src={img1}
-            alt="image1"
-          />
+          {/* Image Section */}
+          <div className="w-full sm:w-1/2 flex justify-center">
+            <img className="w-full  rounded-lg" src={img1} alt="Goal Image" />
+          </div>
         </div>
       </section>
     </div>
